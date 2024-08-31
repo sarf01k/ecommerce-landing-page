@@ -7,12 +7,13 @@
 }
 
 body {
+    background-color: #efefef;
     /* display: grid; */
     width: 100%;
     /* grid-template-columns: 100%;
     grid-template-rows: 100vh auto; */
     padding: 0 4px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 li {
@@ -50,7 +51,7 @@ nav {
 }
 
 main {
-    background-color: #efefef;
+    background-color: #fafafa;
 }
 
 .banner {
@@ -92,6 +93,84 @@ h1 {
     cursor: pointer;
 }
 
+.new-arrivals {
+    background-color: #f6f6f6;
+    padding: 50px 0;
+}
+
+.new-arrivals-head {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.product-card {
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+}
+
+.product-image-container {
+    height: 80%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    object-fit: contain;
+    width: 80%;
+}
+
+.sofa {
+    height: 80%;
+}
+
+.club-chair {
+    height: 50%;
+}
+
+.drop-chair {
+    height: 50%;
+}
+
+.arm-chair {
+    height: 60%;
+}
+
+.gold-white-coffee-table {
+    height: 40%;
+}
+
+.grey-chair {
+    height: 50%;
+}
+
+.metal-chair {
+    height: 50%;
+}
+
+.side-table {
+    height: 40%;
+}
+
+.product-name, .product-price {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -102,7 +181,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2b2b2c;
+    background: #000000;
     border-radius: 99999px;
 }
 
