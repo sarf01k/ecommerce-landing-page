@@ -7,13 +7,13 @@
 }
 
 body {
-    background-color: #efefef;
+    background-color: #f6f6f6;
     /* display: grid; */
     width: 100%;
     /* grid-template-columns: 100%;
     grid-template-rows: 100vh auto; */
     padding: 0 4px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 li {
@@ -31,6 +31,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #efefef;
+    border-radius: 8px;
 }
 
 .logo-text {
@@ -78,14 +79,13 @@ h1 {
     font-size: 1rem;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
-    margin-bottom: 18px;
 }
 
 .shop-now-btn {
     display: flex;
     align-items: center;
     padding: 12px 18px;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: #efefef;
     width: max-content;
     color: #000000;
@@ -95,28 +95,35 @@ h1 {
 
 .new-arrivals {
     background-color: #f6f6f6;
-    padding: 50px 0;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .new-arrivals-head {
     text-align: center;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .product-cards {
     display: grid;
-    grid-template-columns: repeat(4, 20%);
+    grid-template-columns: repeat(4, 35%);
     grid-template-rows: auto;
     gap: 10px;
     margin-top: 40px;
+    padding: 50px;
     justify-content: center;
+
 }
 
 .product-card {
     width: auto;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .product-image-container {
@@ -135,34 +142,18 @@ h1 {
 }
 
 .sofa {
-    height: 80%;
+    height: 65%;
 }
 
-.club-chair {
-    height: 50%;
-}
-
-.drop-chair {
-    height: 50%;
-}
-
-.arm-chair {
-    height: 60%;
-}
-
-.gold-white-coffee-table {
+.club-chair, .drop-chair, .grey-chair, .metal-chair {
     height: 40%;
 }
 
-.grey-chair {
+.arm-chair {
     height: 50%;
 }
 
-.metal-chair {
-    height: 50%;
-}
-
-.side-table {
+.gold-white-coffee-table, .side-table {
     height: 40%;
 }
 
@@ -188,4 +179,137 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: #3b3b3c;
     border-radius: 99999px;
+}
+
+@media (min-width: 480px) {
+    
+}
+
+@media (min-width: 768px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-links > li {
+        margin-right: 20px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+    
+    .nav-icons > span {
+        margin-left: 8px;
+    }
+
+    .nav-icons > span > img {
+        scale: 0.8;
+    }
+
+    .new-arrivals-head {
+        font-size: 1rem;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(3, 40%);
+        gap: 15px;
+    }
+
+    .product-card {
+        height: 250px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links > li {
+        margin-right: 30px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+    
+    .nav-icons > span {
+        margin-left: 10px;
+    }
+
+    .nav-icons > span > img {
+        scale: 1;
+    }
+
+    .new-arrivals-head {
+        font-size: 1.2rem;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(4, 40%);
+        padding: 0 15%;
+    }
+
+    .product-card {
+        height: 300px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (width >= 1500px) {
+    nav {
+        padding: 15px 30px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links > li {
+        margin-right: 30px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    
+    .nav-icons > span {
+        margin-left: 10px;
+    }
+
+    .nav-icons > span > img {
+        scale: 1;
+    }
+
+    h1 {
+        font-size: 10rem;
+        line-height: 8rem;
+        margin-bottom: 20px;
+    }
+
+    .text, .shop-now-btn {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .new-arrivals-head {
+        font-size: 1.8rem;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(4, 35%);
+        margin-left: 40px;
+        margin-right: 40px
+    }
+
+    .product-card {
+        height: 360px;
+        margin-bottom: 25px;
+    }
+
+    .product-name, .product-price {
+        font-size: 1.3rem;
+    }
 }
